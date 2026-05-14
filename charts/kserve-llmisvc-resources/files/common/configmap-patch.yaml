@@ -30,7 +30,7 @@ data:
         "cpuRequest": "100m",
         "cpuLimit": "1",
         "imagePullPolicy": "{{ .Values.kserve.router.imagePullPolicy }}",
-        "imagePullSecrets": {{ .Values.kserve.router.imagePullSecrets }}
+        "imagePullSecrets": {{ .Values.kserve.router.imagePullSecrets | toJson }}
     }
   credentials: |-
     {
